@@ -874,13 +874,29 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Connect to the actual backend on port 8001
+      const response = await fetch('http://localhost:8001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        console.error("Submission failed");
+        // You can set an error state here if you like
+      }
+    } catch (error) {
+      console.error("Error connecting to server:", error);
+    } finally {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => setSubmitStatus(null), 3000);
-    }, 1000);
+    }
   };
 
   return (
@@ -969,12 +985,13 @@ const ContactSection = () => {
             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-100 overflow-hidden">
               <iframe
                 title="Shree Guru Mess Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2!2d77.8!3d13.07!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA0JzEyLjAiTiA3N8KwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6713876405234!2d77.78854677507797!3d13.064506987259463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a810237782b%3A0xc3f17d727d92161b!2sHoskote%2C%20Bengaluru%2C%20Karnataka%20562114!5e0!3m2!1sen!2sin!4v1703667541258!5m2!1sen!2sin"
                 width="100%"
                 height="300"
                 style={{ border: 0, borderRadius: '1rem' }}
                 allowFullScreen=""
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>

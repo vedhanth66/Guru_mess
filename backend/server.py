@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv
 import uuid
 from datetime import datetime
+import motor.motor_asyncio  # Required for MongoDB connection
 
 load_dotenv()
 
@@ -19,6 +20,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# --- DATABASE CONNECTION ---
+# Uses 'mongodb://localhost:27017' as default if not found in .env
+MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URL)
+db = client.shree_guru_mess
+contact_collection = db.get_collection("contact_messages")
+reservation_collection = db.get_collection("reservations")
 
 # Models
 class ContactForm(BaseModel):
@@ -36,10 +45,6 @@ class Reservation(BaseModel):
     guests: int
     special_requests: Optional[str] = None
 
-# In-memory storage for demo
-contact_messages = []
-reservations = []
-
 @app.get("/api/health")
 async def health_check():
     return {"status": "healthy", "restaurant": "Shree Guru Mess"}
@@ -55,7 +60,8 @@ async def submit_contact(form: ContactForm):
         "message": form.message,
         "created_at": datetime.now().isoformat()
     }
-    contact_messages.append(contact_data)
+    # Save to MongoDB
+    await contact_collection.insert_one(contact_data)
     return {"success": True, "message": "Thank you for reaching out! We will get back to you soon.", "id": message_id}
 
 @app.post("/api/reservation")
@@ -72,7 +78,8 @@ async def make_reservation(reservation: Reservation):
         "special_requests": reservation.special_requests,
         "created_at": datetime.now().isoformat()
     }
-    reservations.append(reservation_data)
+    # Save to MongoDB
+    await reservation_collection.insert_one(reservation_data)
     return {"success": True, "message": "Reservation confirmed! We look forward to serving you.", "id": reservation_id}
 
 @app.get("/api/menu")
@@ -95,4 +102,5 @@ async def get_menu():
 
 if __name__ == "__main__":
     import uvicorn
+    # Runs on port 8001
     uvicorn.run(app, host="0.0.0.0", port=8001)
