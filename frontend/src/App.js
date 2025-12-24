@@ -116,9 +116,7 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#contact" className="btn-primary text-sm">
-              Reserve Table
-            </a>
+            {/* Reserve Table button REMOVED */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -148,7 +146,7 @@ const Navigation = () => {
             isMobileMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
           }`}
         >
-          <div className="bg-white rounded-2xl shadow-xl p-6 space-y-4">
+          <div className="bg-white rounded-2xl shadow-xl p-6 space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -159,9 +157,7 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#contact" className="btn-primary block text-center">
-              Reserve Table
-            </a>
+            {/* Mobile Reserve Table button REMOVED */}
           </div>
         </div>
       </div>
@@ -222,23 +218,16 @@ const HeroSection = () => {
               View Menu
             </span>
           </a>
-          <a href="#contact" className="bg-white text-leaf-700 px-8 py-3 rounded-full font-semibold hover:bg-leaf-50 transition-all duration-300 shadow-lg">
-            <span className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Reserve Table
-            </span>
-          </a>
+          {/* Reserve Table button REMOVED */}
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {[
-            { number: 15, suffix: '+', label: 'Years of Tradition' },
+            { number: 5, suffix: '+', label: 'Years of Excellence'},
             { number: 100, suffix: '%', label: 'Pure Ingredients' },
             { number: 10000, suffix: '+', label: 'Happy Customers' },
-            { number: 50, suffix: '+', label: 'Daily Dishes' },
+            { number: 25, suffix: '+', label: 'Daily Dishes' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-1">
@@ -251,11 +240,11 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center pt-2">
           <div className="w-1.5 h-3 bg-white/70 rounded-full animate-pulse"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
@@ -279,7 +268,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <img 
-                src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=600&h=500&fit=crop"
+                src="\Gem_1.png"
                 alt="Traditional South Indian Banana Leaf Meal"
                 className="rounded-2xl shadow-2xl w-full object-cover h-96 lg:h-[500px]"
               />
@@ -288,7 +277,7 @@ const AboutSection = () => {
             <div className="absolute -top-8 -left-8 w-32 h-32 bg-teal-400 rounded-2xl -z-10"></div>
             
             {/* Experience badge */}
-            <div className="absolute -bottom-6 left-6 bg-white rounded-2xl shadow-xl p-6 z-20">
+            {/* <div className="absolute -bottom-6 left-6 bg-white rounded-2xl shadow-xl p-6 z-20">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-leaf-100 rounded-full flex items-center justify-center">
                   <span className="text-2xl">🍃</span>
@@ -298,7 +287,7 @@ const AboutSection = () => {
                   <p className="text-gray-600 text-sm">Years of Excellence</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="space-y-6">
@@ -478,26 +467,26 @@ const MenuSection = () => {
       title: 'Unlimited Meals',
       items: [
         {
-          name: 'Traditional Banana Leaf Meals',
-          description: 'Complete South Indian thali with rice, sambar, rasam, kootu, poriyal, curd, pickle, papad & jaggery payasam',
-          highlight: 'Unlimited Servings',
+          name: 'Traditional Banana Leaf Ragi Mudde Meals',
+          description: 'Complete South Indian meal with Ragi mudde(Ragi ball), 4 types of palya, 2 types sambar, 2 types of curry, 2 types of sweet(completely made of jaggery), rice, rasam, curd, Buttermilk, pickle, papad, Bajji/Bonda',
+          highlight: 'Highly nutritious',
           price: 'Unlimited',
         },
         {
-          name: 'Ragi Mudde Special',
-          description: 'Nutritious finger millet balls served with authentic sambar and fresh coconut chutney',
-          highlight: 'High in Calcium',
+          name: 'Traditional Banana Leaf chapathi Meals',
+          description: 'Complete South Indian meal with chapathi, 4 types of palya, 2 types sambar, 2 types of curry, 2 types of sweet(completely made of jaggery), rice, rasam, curd, Buttermilk, pickle, papad, Bajji/Bonda',
+          highlight: 'Highly energetic',
           price: 'Unlimited',
         },
         {
-          name: 'Chapathi Meals',
-          description: 'Soft whole wheat chapathis with dal fry, mixed vegetable curry, and raita',
-          highlight: 'Whole Wheat',
+          name: 'Breakfast',
+          description: 'Idly-sambar, poori-saagu, upma, Vada, 1-Rice-item(Changes daily)',
+          highlight: 'Perfect way to start the day',
           price: 'Unlimited',
         },
         {
           name: 'Rice Varieties',
-          description: 'Bisi Bele Bath, Puliyogare, Chitranna, Curd Rice — rotated daily',
+          description: 'Bisi Bele Bath, Puliyogare, Chitranna, Pongal, Vegetable Biryani, Soya Biryani, Ghee Rice, Rice Bath',
           highlight: 'Changes Daily',
           price: 'Unlimited',
         },
@@ -517,14 +506,19 @@ const MenuSection = () => {
           highlight: 'Digestive',
         },
         {
-          name: 'Kootu & Poriyal',
-          description: 'Lentil-based kootu and dry vegetable preparations, changes daily',
+          name: 'Varieties of pallya',
+          description: 'Vegetable based curries and pallya, changes daily',
           highlight: 'Protein Rich',
         },
         {
           name: 'Fresh Chutneys',
           description: 'Coconut, tomato, and groundnut chutneys freshly prepared',
           highlight: 'Made Fresh',
+        },
+        {
+          name: 'Fritters',
+          description: 'Tasty and healthy snack, changes daily',
+          highlight: 'Healthy and tasty',
         },
       ],
     },
@@ -543,13 +537,18 @@ const MenuSection = () => {
         },
         {
           name: 'Jaggery Laddu',
-          description: 'Handmade laddus with roasted gram flour and pure jaggery',
+          description: 'Handmade laddus with roasted gram and jaggery',
           highlight: 'No Sugar',
         },
         {
           name: 'Kesari Bath',
           description: 'Semolina sweet dish made with ghee and jaggery',
           highlight: 'Pure Ghee',
+        },
+        {
+          name: 'Jalebi/Jahangir',
+          description: 'Traditional Indian sweet dish made with ghee and jaggery',
+          highlight: 'Pure Jaggery',
         },
       ],
     },
@@ -567,9 +566,9 @@ const MenuSection = () => {
           highlight: 'Probiotic',
         },
         {
-          name: 'Fresh Lime Juice',
+          name: 'Fresh Juice',
           description: 'Made with rock sugar or jaggery, no refined sugar',
-          highlight: 'Vitamin C',
+          highlight: 'Nutritious',
         },
         {
           name: 'Masala Chai',
@@ -670,7 +669,7 @@ const GallerySection = () => {
 
   const galleryImages = [
     { 
-      src: 'https://images.unsplash.com/photo-1630383249896-424e482df921?w=600&h=400&fit=crop', 
+      src: '/Chat_1.png',
       alt: 'Traditional Banana Leaf Meals',
       span: 'col-span-2 row-span-2'
     },
@@ -889,7 +888,6 @@ const ContactSection = () => {
         setFormData({ name: '', email: '', phone: '', message: '' });
       } else {
         console.error("Submission failed");
-        // You can set an error state here if you like
       }
     } catch (error) {
       console.error("Error connecting to server:", error);
@@ -920,7 +918,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
@@ -985,7 +983,8 @@ const ContactSection = () => {
             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-100 overflow-hidden">
               <iframe
                 title="Shree Guru Mess Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6713876405234!2d77.78854677507797!3d13.064506987259463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a810237782b%3A0xc3f17d727d92161b!2sHoskote%2C%20Bengaluru%2C%20Karnataka%20562114!5e0!3m2!1sen!2sin!4v1703667541258!5m2!1sen!2sin"
+                // Working embed URL
+                src="https://maps.google.com/maps?q=Shree+Guru+Mess+Hoskote+Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="300"
                 style={{ border: 0, borderRadius: '1rem' }}
@@ -997,7 +996,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+          {/* <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
             <h3 className="text-2xl font-display font-bold text-gray-800 mb-6">Send us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -1075,7 +1074,7 @@ const ContactSection = () => {
                 </div>
               )}
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
