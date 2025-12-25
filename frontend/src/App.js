@@ -89,9 +89,11 @@ const Navigation = () => {
             <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
               isScrolled ? 'bg-leaf-600' : 'bg-white'
             }`}>
-              <span className={`text-2xl font-display font-bold ${
-                isScrolled ? 'text-white' : 'text-leaf-600'
-              }`}>श्री</span>
+              <img
+                src="/Icon.png" 
+                alt="Shree Guru Mess Logo"
+                className="h-12 w-12 object-contain"
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className={`text-xl font-display font-bold transition-colors duration-300 ${
@@ -674,28 +676,33 @@ const GallerySection = () => {
       span: 'col-span-2 row-span-2'
     },
     { 
-      src: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&h=300&fit=crop', 
+      src: '/Dosa.jpg', 
       alt: 'South Indian Dosa',
       span: 'col-span-1'
     },
     { 
-      src: 'https://images.unsplash.com/photo-1567337710282-00832b415979?w=400&h=300&fit=crop', 
-      alt: 'Idli Sambar',
+      src: '/Idli.jpg', 
+      alt: 'Idli',
       span: 'col-span-1'
     },
     { 
-      src: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=400&fit=crop', 
+      src: '/Coffee.jpg', 
       alt: 'Filter Coffee',
       span: 'col-span-1 row-span-2'
     },
     { 
-      src: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop', 
-      alt: 'Fresh Ingredients',
+      src: 'Sweet.jpg', 
+      alt: 'Jaggery Sweet',
+      span: 'col-span-1 row-span-2'
+    },
+    { 
+      src: 'Traditional_cooking.jpg', 
+      alt: 'Traditional Fresh Ingredients',
       span: 'col-span-1'
     },
     { 
-      src: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400&h=300&fit=crop', 
-      alt: 'Traditional Cooking',
+      src: 'Obattu.jpg', 
+      alt: 'Obbattu',
       span: 'col-span-1'
     },
   ];
@@ -759,19 +766,19 @@ const TestimonialsSection = () => {
       rating: 5,
     },
     {
-      name: 'Priya Sharma',
+      name: 'Jhanvi',
       role: 'Food Blogger',
       text: 'Finally, a place that serves real South Indian food! The ragi mudde is incredible, and knowing there are no preservatives makes every bite guilt-free. Highly recommended!',
       rating: 5,
     },
     {
-      name: 'Mohammed Ismail',
+      name: 'Sumanth',
       role: 'Local Businessman',
       text: 'I\'ve been coming here for years. The unlimited meals concept with such quality is unmatched. My whole family loves the homely atmosphere and healthy food.',
       rating: 5,
     },
     {
-      name: 'Lakshmi Narayan',
+      name: 'Lakshmi Narayana',
       role: 'Senior Citizen',
       text: 'At my age, I need food that\'s easy to digest and healthy. Shree Guru Mess provides exactly that. The traditional recipes and pure ingredients keep me coming back.',
       rating: 5,
@@ -946,7 +953,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800">Phone</p>
-                    <p className="text-gray-600">+91 XXXXX XXXXX</p>
+                    <p className="text-gray-600">+91 9972212522</p>
                   </div>
                 </div>
 
@@ -959,9 +966,8 @@ const ContactSection = () => {
                   <div>
                     <p className="font-semibold text-gray-800">Operating Hours</p>
                     <p className="text-gray-600">Monday - Sunday</p>
-                    <p className="text-gray-600">Breakfast: 7:00 AM - 10:30 AM</p>
-                    <p className="text-gray-600">Lunch: 12:00 PM - 3:30 PM</p>
-                    <p className="text-gray-600">Dinner: 7:00 PM - 10:00 PM</p>
+                    <p className="text-gray-600">Breakfast: 7:00 AM - 11:30 AM</p>
+                    <p className="text-gray-600">Lunch: 12:30 PM - 4:30 PM</p>
                   </div>
                 </div>
 
@@ -973,7 +979,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800">Email</p>
-                    <p className="text-gray-600">contact@shreegurumess.com</p>
+                    <p className="text-gray-600">kumar.jayantha43@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -1103,10 +1109,10 @@ const Footer = () => {
               Experience the taste of tradition with our health-conscious, preservative-free meals.
             </p>
             <div className="flex gap-4">
-              {['facebook', 'instagram', 'twitter'].map((social) => (
+              {['instagram'].map((social) => (
                 <a
                   key={social}
-                  href="#"
+                  href="https://www.instagram.com/shree.gurumess/"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-leaf-600 transition-colors duration-300"
                 >
                   <span className="sr-only">{social}</span>
