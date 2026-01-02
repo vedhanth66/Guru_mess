@@ -198,7 +198,7 @@ const HeroSection = () => {
         }`}
       >
         <div className="inline-block mb-6 px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-          <span className="text-white font-medium">🌿 Pure • Fresh • Healthy</span>
+          <span className="text-white font-medium">🌿 Pure Veg • Fresh • Healthy</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight">
@@ -349,7 +349,7 @@ const HealthSection = () => {
     {
       icon: '🥥',
       title: 'Cold-Pressed Oils Only',
-      description: 'We use only cold-pressed groundnut and coconut oils. No palm oil, no refined oils — just pure, heart-healthy traditional oils.',
+      description: 'We use only cold-pressed groundnut oil. No palm oil, just pure, heart-healthy traditional oils.',
       color: 'from-green-400 to-emerald-500',
       bgColor: 'bg-green-50',
     },
