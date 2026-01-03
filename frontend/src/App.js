@@ -1198,6 +1198,7 @@ function App() {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <Analytics />
     </div>
   );
 }
