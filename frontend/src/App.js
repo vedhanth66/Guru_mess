@@ -91,14 +91,14 @@ const Navigation = () => {
             }`}>
               <img
                 src="/Icon.png" 
-                alt="Shree Guru Mess Logo"
+                alt="Matha Shree Annapoorneswari Mess Logo"
                 className="h-12 w-12 object-contain"
               />
             </div>
             <div className="hidden sm:block">
               <h1 className={`text-xl font-display font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-gray-800' : 'text-white'
-              }`}>Shree Guru Mess</h1>
+              }`}>Matha Shree Annapoorneswari Mess</h1>
               <p className={`text-xs transition-colors duration-300 ${
                 isScrolled ? 'text-leaf-600' : 'text-white/80'
               }`}>Traditional South Indian</p>
@@ -202,8 +202,8 @@ const HeroSection = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight">
-          Shree Guru
-          <span className="block text-white/90">Mess</span>
+          Matha Shree
+          <span className="block text-white/90">Annapoorneswari Mess</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 font-light">
@@ -303,7 +303,7 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-gray-600 text-lg leading-relaxed">
-              At <strong>Shree Guru Mess</strong>, we believe that good food is the foundation of good health. 
+              At <strong>Matha Shree Annapoorneswari Mess</strong>, we believe that good food is the foundation of good health. 
               Nestled in the heart of Hoskote, Bengaluru, our humble mess has been serving authentic 
               South Indian cuisine the way it was meant to be — pure, fresh, and made with love.
             </p>
@@ -780,7 +780,7 @@ const TestimonialsSection = () => {
     {
       name: 'Lakshmi Narayana',
       role: 'Senior Citizen',
-      text: 'At my age, I need food that\'s easy to digest and healthy. Shree Guru Mess provides exactly that. The traditional recipes and pure ingredients keep me coming back.',
+      text: 'At my age, I need food that\'s easy to digest and healthy. Matha Shree Annapoorneswari Mess provides exactly that. The traditional recipes and pure ingredients keep me coming back.',
       rating: 5,
     },
   ];
@@ -941,7 +941,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800">Address</p>
-                    <p className="text-gray-600">Near Police Station & Bus Stand, Old Madras Rd, next to YAMAHA Showroom, National Highway, Swamy Vivekananda Nagar, KHB Colony, Hoskote, Bengaluru, Karnataka 562114</p>
+                    <p className="text-gray-600">After Toll Gate, Sy 77/a, Taluk, above Allen Solly, 3rd floor, Doddaammanikere, Hoskote, Bengaluru, Karnataka 562114</p>
                   </div>
                 </div>
 
@@ -988,7 +988,7 @@ const ContactSection = () => {
             {/* Map */}
             <div className="bg-white rounded-3xl p-4 shadow-lg border border-gray-100 overflow-hidden">
               <iframe
-                title="Shree Guru Mess Location"
+                title="Matha Shree Annapoorneswari Mess Location"
                 // Working embed URL
                 src="https://maps.google.com/maps?q=Shree+Guru+Mess+Hoskote+Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -1110,7 +1110,7 @@ const Footer = () => {
                 <span className="text-2xl font-display font-bold text-white">श्री</span>
               </div>
               <div>
-                <h3 className="text-xl font-display font-bold">Shree Guru Mess</h3>
+                <h3 className="text-xl font-display font-bold">Matha Shree Annapoorneswari Mess</h3>
                 <p className="text-gray-400 text-sm">Traditional South Indian Restaurant</p>
               </div>
             </div>
@@ -1123,7 +1123,7 @@ const Footer = () => {
               {['instagram'].map((social) => (
                 <a
                   key={social}
-                  href="https://www.instagram.com/shree.gurumess/"
+                  href="https://www.instagram.com/shree.annapoorneshwari.mess/"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-leaf-600 transition-colors duration-300"
                 >
                   <span className="sr-only">{social}</span>
@@ -1172,7 +1172,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Shree Guru Mess. All rights reserved.
+              © {new Date().getFullYear()} Matha Shree Annapoorneswari Mess. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm">
               Made with ❤️ in Hoskote, Bengaluru
