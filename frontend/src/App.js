@@ -201,9 +201,9 @@ const HeroSection = () => {
           <span className="text-white font-medium">🌿 Pure Veg • Fresh • Healthy</span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-orange mb-6 leading-tight">
           Matha Shree
-          <span className="block text-white/90">Annapoorneswari Mess</span>
+          <span className="block text-red/90">Annapoorneswari Mess</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 font-light">
