@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
 
 // Custom hook for scroll animations
 const useIntersectionObserver = () => {
