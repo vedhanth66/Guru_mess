@@ -816,13 +816,13 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative grid grid-cols-1">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`testimonial-card bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 transition-all duration-500 ${
-                  index === activeIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-95 absolute inset-0'
+                className={`testimonial-card w-full bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 transition-all duration-500 col-start-1 row-start-1 ${
+                  index === activeIndex ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 scale-95 pointer-events-none'
                 }`}
               >
                 <div className="flex flex-col items-center text-center">
